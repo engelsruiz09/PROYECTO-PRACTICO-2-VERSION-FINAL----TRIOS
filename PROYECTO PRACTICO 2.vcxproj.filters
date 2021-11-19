@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Clases">
+      <UniqueIdentifier>{8ccdc11b-00c5-4d20-b18c-1fa8741ed8ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Formularios">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Clases\Datos">
+      <UniqueIdentifier>{3b516a14-fd16-4b21-a422-7be9a91fb409}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clases\Estructuras">
+      <UniqueIdentifier>{30e4e4ab-40ef-486c-bd23-ae2b6bdeb04a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clases\Entidades">
+      <UniqueIdentifier>{7b868c4c-56f5-4bb8-b2b7-c340b9390fa6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="frmMenu.h">
+      <Filter>Formularios</Filter>
+    </ClInclude>
+    <ClInclude Include="Lista.h">
+      <Filter>Clases\Estructuras</Filter>
+    </ClInclude>
+    <ClInclude Include="Nodo.h">
+      <Filter>Clases\Estructuras</Filter>
+    </ClInclude>
+    <ClInclude Include="CsvReader.h">
+      <Filter>Clases\Datos</Filter>
+    </ClInclude>
+    <ClInclude Include="CsvWriter.h">
+      <Filter>Clases\Datos</Filter>
+    </ClInclude>
+    <ClInclude Include="Persona.h">
+      <Filter>Clases\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Curso.h">
+      <Filter>Clases\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Alumno.h">
+      <Filter>Clases\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Empleado.h">
+      <Filter>Clases\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Docente.h">
+      <Filter>Clases\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="Trabajador.h">
+      <Filter>Clases\Entidades</Filter>
+    </ClInclude>
+    <ClInclude Include="frmAlumnos.h">
+      <Filter>Formularios</Filter>
+    </ClInclude>
+    <ClInclude Include="Herramientas.h">
+      <Filter>Clases</Filter>
+    </ClInclude>
+    <ClInclude Include="frmDocente.h">
+      <Filter>Formularios</Filter>
+    </ClInclude>
+    <ClInclude Include="frmEmpleado.h">
+      <Filter>Formularios</Filter>
+    </ClInclude>
+    <ClInclude Include="frmPersonas.h">
+      <Filter>Formularios</Filter>
+    </ClInclude>
+    <ClInclude Include="frmReportes.h">
+      <Filter>Formularios</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
