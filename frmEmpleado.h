@@ -797,8 +797,10 @@ namespace PROYECTOPRACTICO2 {
 		trabajador->Salario = (float)nudCrearSalario->Value;
 
 		trabajador->Cargo = StdString(txtCrearCargo->Text);
-
+		trabajador->Codigo = (rand() % (100000 - 10000) + 10000) * 100 + ((trabajador->Inicio / 10000) % 100);
 		trabajadores->Insertar(trabajador);
+
+		
 
 		LlenarDatosTrabajadores();
 
@@ -826,6 +828,7 @@ private: System::Void btnModificar_Click(System::Object^ sender, System::EventAr
 		trabajadorModificar->Salario = (float)nudModificarSalario->Value;
 
 		trabajadorModificar->Cargo = StdString(txtModificarCargo->Text);
+		trabajadorModificar->Codigo = (rand() % (100000 - 10000) + 10000) * 100 + ((trabajadorModificar->Inicio / 10000) % 100);
 		LlenarDatosTrabajadores();
 	}
 }
@@ -844,6 +847,7 @@ private: System::Void cbxModificarTrabajadors_SelectedIndexChanged(System::Objec
 		txtModificarCargo->Text = VisualString(trabajador->Cargo);
 
 		trabajadorModificar = trabajador;
+
 		LlenarDatosTrabajadores();
 	}
 	else

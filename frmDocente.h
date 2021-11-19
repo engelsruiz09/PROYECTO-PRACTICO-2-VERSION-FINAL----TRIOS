@@ -935,7 +935,7 @@ private: System::Windows::Forms::NumericUpDown^ nudModificarInicio;
 		docente->Salario = (float)nudCrearSalario->Value;
 
 		docente->Cursos = cursos;
-
+		docente->Codigo = (rand() % (100000 - 10000) + 10000) * 100 + ((docente->Inicio / 10000) % 100);
 		docentes->Insertar(docente);
 
 		txtCrearNombres->Clear();
@@ -980,6 +980,8 @@ private: System::Void btnModificar_Click(System::Object^ sender, System::EventAr
 
 		docenteModificar->Inicio = (int)nudModificarInicio->Value;
 		docenteModificar->Salario = (float)nudModificarSalario->Value;
+		docenteModificar->Codigo = (rand() % (100000 - 10000) + 10000) * 100 + ((docenteModificar->Inicio / 10000) % 100);
+	
 		LlenarDatosDocentes();
 	}
 }

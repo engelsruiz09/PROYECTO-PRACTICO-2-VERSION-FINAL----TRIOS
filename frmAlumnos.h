@@ -1211,8 +1211,9 @@ namespace PROYECTOPRACTICO2 {
 
 		alumno->Cursos = cursos;
 
+		alumno->Carnet = (rand() % (100000 - 10000) + 10000) * 100 + (alumno->Ingreso % 100);
 		alumnos->Insertar(alumno);
-
+		
 		txtCrearNombres->Clear();
 		txtCrearApellidos->Clear();
 		txtCrearDPI->Clear();
@@ -1266,6 +1267,7 @@ namespace PROYECTOPRACTICO2 {
 			cbxModificarModalidad->Text = VisualString(alumno->Modalida);
 
 			alumnoModificar = alumno;
+			
 			LlenarDatosAlumnos();
 		}
 		else
@@ -1323,7 +1325,10 @@ namespace PROYECTOPRACTICO2 {
 			alumnoModificar->Ingreso = (int)nudModificarIngreso->Value;
 			alumnoModificar->Facultad = StdString(txtModificarFacultad->Text);
 			alumnoModificar->Modalida = StdString(cbxModificarModalidad->Text);
+			
+			alumnoModificar->Carnet = (rand() % (100000 - 10000) + 10000) * 100 + (alumnoModificar->Ingreso % 100);
 			LlenarDatosAlumnos();
+			
 		}
 	}
 	private: System::Void tabPage5_Enter(System::Object^ sender, System::EventArgs^ e) 
