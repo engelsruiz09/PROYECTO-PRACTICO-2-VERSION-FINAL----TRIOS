@@ -143,6 +143,7 @@ namespace PROYECTOPRACTICO2 {
 #pragma endregion
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
 	{
+		//aplicamos una busqueda lineal ya que como los datos no estan ordenados como tal
 		for (int i = 0; i < personas->cantidad; i++)
 		{
 			Persona* persona = personas->Obtener(i);
