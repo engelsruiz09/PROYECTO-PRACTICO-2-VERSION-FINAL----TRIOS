@@ -290,6 +290,7 @@ namespace PROYECTOPRACTICO2 {
 	}
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
+		//esta parte es para poder ordenar por tipo de nombre del curso que quire buscar 
 		for (int i = 0; i < lbxAlumnos->Items->Count - 1; i++)
 			for (int j = i + 1; j < lbxAlumnos->Items->Count; j++)
 			{
@@ -311,6 +312,7 @@ namespace PROYECTOPRACTICO2 {
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e)
 	{
+		//esta parte es para poder ordenar por medio de notas
 		for (int i = 0; i < lbxAlumnos->Items->Count - 1; i++)
 			for (int j = i + 1; j < lbxAlumnos->Items->Count; j++)
 			{

@@ -87,9 +87,9 @@ public:
 		Nodo<T>* nodo = ObtenerNodo(posicion);
 		return nodo->valor;
 	}
-	T operator[](int posicion)
+	/*T operator[](int posicion)
 	{
 		Nodo<T>* nodo = ObtenerNodo(posicion);
 		return nodo->valor;
-	}
+	}*/
 };

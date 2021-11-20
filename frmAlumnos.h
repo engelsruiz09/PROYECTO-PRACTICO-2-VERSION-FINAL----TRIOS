@@ -118,37 +118,45 @@ namespace PROYECTOPRACTICO2 {
 		}
 		void LeerCSV(String^ path)
 		{
-			alumnos = new Lista<Alumno*>;
-			CsvReader* CSV = new CsvReader(StdString(path));
-			while (CSV->ReadLine())
+			try
 			{
-				Alumno* alumno = new Alumno();
-				CSV->Read(alumno->Apellidos);
-				CSV->Read(alumno->Nombres);
-				std::string ingreso;
-				CSV->Read(ingreso);
-				alumno->Ingreso = std::stoi(ingreso);
-				CSV->Read(alumno->DPI);
-				CSV->Read(alumno->Facultad);
-				CSV->Read(alumno->Modalida);
-
-				//aca se genera los primeros 5 numeros aleatorio y se le concatena los ultimos dos del año de ingreso
-				alumno->Carnet = (rand() % (100000 - 10000) + 10000) * 100 + (alumno->Ingreso % 100);
-
-				std::string str_curso;
-				while (CSV->Read(str_curso))
+				alumnos = new Lista<Alumno*>;
+				CsvReader* CSV = new CsvReader(StdString(path));
+				while (CSV->ReadLine())
 				{
-					String^ CURSO = VisualString(str_curso);
+					Alumno* alumno = new Alumno();
+					CSV->Read(alumno->Apellidos);
+					CSV->Read(alumno->Nombres);
+					std::string ingreso;
+					CSV->Read(ingreso);
+					alumno->Ingreso = std::stoi(ingreso);
+					CSV->Read(alumno->DPI);
+					CSV->Read(alumno->Facultad);
+					CSV->Read(alumno->Modalida);
 
-					Curso* curso = new Curso();
-					curso->Nombre = StdString(CURSO->Split(' ')[0]);
-					curso->Nota = std::stof(StdString(CURSO->Split(' ')[1]));
+					//aca se genera los primeros 5 numeros aleatorio y se le concatena los ultimos dos del año de ingreso
+					alumno->Carnet = (rand() % (100000 - 10000) + 10000) * 100 + (alumno->Ingreso % 100);
 
-					alumno->Cursos->Insertar(curso);
+					std::string str_curso;
+					while (CSV->Read(str_curso))
+					{
+						String^ CURSO = VisualString(str_curso);
+
+						Curso* curso = new Curso();
+						curso->Nombre = StdString(CURSO->Split(' ')[0]);
+						curso->Nota = std::stof(StdString(CURSO->Split(' ')[1]));
+
+						alumno->Cursos->Insertar(curso);
+					}
+
+					alumnos->Insertar(alumno);
 				}
-
-				alumnos->Insertar(alumno);
 			}
+			catch (Exception^ e)
+			{
+				MessageBox::Show("ERROR DE LECTURA" + e->Message, "ERROR DETECTADO", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+			
 		}
 		void AgregarColumna(String^ nombre)
 		{
